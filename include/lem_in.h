@@ -15,4 +15,23 @@
 
 # include "../libft/include/libft.h"
 
+typedef struct s_room
+{
+    char    *name;
+    int     x;
+    int     y;
+    unsigned int visited;
+    struct s_room *next;
+    struct s_room *previous;
+    struct s_room **link;            // **
+}              t_room;
+
+typedef struct s_ant
+{
+    int     count;
+    int     number;
+    int     x;
+    int     y;
+}              t_ant;
+
 #endif

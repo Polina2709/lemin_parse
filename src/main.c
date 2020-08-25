@@ -80,6 +80,7 @@ int				main(int argc, char **argv)
 		ft_putstr_fd("ERROR\n", 2);
 		return (-1);
 	}
+	parse(map);
 	int i;
 
 	i = 0;
