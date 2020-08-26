@@ -40,6 +40,11 @@ int check_ants(char **map, t_ant *ants)
             ants->count = ants->count * 10 + (int)**map;
         **map++;
     }
+    if (!(ants->count > 0 && ants->count < 2147483648))
+    {
+	    ft_putstr_fd("ERROR\n", 2);
+	    return (-1);
+    }
     return (0);
 }
 
