@@ -6,16 +6,11 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 12:38:02 by jconcent          #+#    #+#             */
-/*   Updated: 2020/08/25 22:19:07 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/08/31 12:55:11 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
-
-/*
-**	Здесь предполагаю инициализировать структуру, в которой всё будем хранить. 
-**	Позже сюда добавится инициализация матрицы ссылок и матрицы комнат (+malloc)
-*/
 
 static int		init_struct(t_lm_data *lem, char **map)
 {
@@ -23,6 +18,17 @@ static int		init_struct(t_lm_data *lem, char **map)
 	if ((lem->nb_rooms = count_rooms(map)) == -1)
 		return (-1);
 	lem->nb_links = count_links(map);
+	lem->start = NULL;
+	lem->end = NULL;
+	if ((lem->rooms = (char **)malloc(sizeof(char *) * lem->nb_rooms + 1)) == NULL)
+		return (-1);
+	lem->rooms[lem->nb_rooms] = 0;
+	if ((lem->links = (char **)malloc(sizeof(char *) * lem->nb_links +1)) == NULL)
+	{
+		ft_clear_table(lem->rooms);
+		return (-1);
+	}
+	lem->links[lem->nb_links] = 0;
 	return (0);
 }
 
