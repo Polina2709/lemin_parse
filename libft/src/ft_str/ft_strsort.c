@@ -24,7 +24,7 @@ void	ft_strsort(char *str)
 		while (j < ft_strlen(str))
 		{
 			if (str[i] < str[j])
-				ft_swap(&str[i], &str[j]);
+			//	ft_swap(&str[i], &str[j]);
 			j++;
 		}
 		i++;

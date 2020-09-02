@@ -1,4 +1,4 @@
-* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   utilities_1.c                                      :+:      :+:    :+:   */
@@ -28,7 +28,7 @@ int	count_spaces(char *line)
 	return (spaces);
 }
 
-int	count_links(char **map)
+int	ft_count_links(char **map)
 {
 	int i;
 	int links;
@@ -44,7 +44,7 @@ int	count_links(char **map)
 	return (links);
 }
 
-int	count_rooms(char **map)
+int	ft_count_rooms(char **map)
 {
 	int i;
 	int rooms;

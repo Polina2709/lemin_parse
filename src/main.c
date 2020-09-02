@@ -12,12 +12,12 @@
 
 #include "lem_in.h"
 
-static int		init_struct(t_lm_data *lem, char **map)
+int		init_struct(t_lm_data *lem, char **map)
 {
 	lem->nb_ants = 0;
-	if ((lem->nb_rooms = count_rooms(map)) == -1)  //// почему то функцию count rooms подсвечивает красных, хотя она есть. Мб из--за того, что здесь статик, но я не уверена
+	if ((lem->nb_rooms = ft_count_rooms(map)) == -1)  //// почему то функцию count rooms подсвечивает красных, хотя она есть. Мб из--за того, что здесь статик, но я не уверена
 		return (-1);
-	lem->nb_links = count_links(map); //// c count_links то же самое что и с count_rooms
+	lem->nb_links = ft_count_links(map); //// c count_links то же самое что и с count_rooms
 	lem->start = NULL;
 	lem->end = NULL;
 	if ((lem->rooms = (char **)malloc(sizeof(char *) * lem->nb_rooms + 1)) == NULL)
@@ -32,14 +32,14 @@ static int		init_struct(t_lm_data *lem, char **map)
 	return (0);
 }
 
-static int		check_empty_line(char *file)
+int		check_empty_line(char *file)
 {
 	int i;
 
 	i = 0;
 	if (!file)
 		return (-1);
-	while (file[i++])
+	while (file[i++]) ////  У тебя и тут меняется и в конце цикла, ты разве не прыгаешь, через символ?
 	{
 		if (file[i] == '\n' && file[i + 1] == '\n') ////а тут он не будет смотреть за пределы файла в [i + 1] ?
 			return (-1);
@@ -50,7 +50,7 @@ static int		check_empty_line(char *file)
 	return (0);
 }
 
-static char		**check_and_save_map(char *file)
+char		**check_and_save_map(char *file)
 {
 	char **map;
 
@@ -68,7 +68,7 @@ static char		**check_and_save_map(char *file)
 	return (NULL);
 }
 
-static char		**read_map(int fd_map)
+char		**read_map(int fd_map)
 {
 	int		byte;
 	char	*file;

@@ -30,7 +30,7 @@
 
 typedef struct	s_lm_data
 {
-	int nb_ants;
+	int nb_ants; //// мб тут лонг инт сделать (есть мысля, если что объясню ВК)
 	int nb_rooms;
 	int nb_links;
 	char *start;
@@ -44,7 +44,7 @@ typedef struct s_room
     char    *name;
     int     x;
     int     y;
-    unsigned int visited;
+ //   unsigned int visited;
     struct s_room *next;
     struct s_room *previous;
     struct s_room **link;            // **
@@ -65,5 +65,23 @@ typedef struct	s_node
 	int col;
 	int row;
 }				t_node;
+
+
+
+int				main(int argc, char **argv);
+char		**read_map(int fd_map);
+char		**check_and_save_map(char *file);
+int		check_empty_line(char *file);
+int		init_struct(t_lm_data *lem, char **map);
+
+int	count_spaces(char *line);
+int	ft_count_links(char **map);
+int	ft_count_rooms(char **map);
+
+int	parse(char **map, t_lm_data *lem);
+int get_data(char **map, t_lm_data *lem);
+int record_rooms(t_lm_data *lem, char **map);
+int check_ants(t_lm_data *lem, char **map);
+
 
 #endif
