@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lemin_parse"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lemin_parse">
+				<Option output="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/lemin_parse.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/include"/>
+					<Add directory="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 lemin_parse"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lemin_parse/fast">
+				<Option output="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/lemin_parse.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/include"/>
+					<Add directory="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 lemin_parse/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/include/lem_in.h">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/include/ft_array.h">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/include/ft_printf.h">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/include/get_next_line.h">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/include/libft.h">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_array/ft_array_add.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_array/ft_array_clear.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_array/ft_array_insert.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_array/ft_array_pop.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_array/ft_array_print.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_array/ft_array_reserve.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_array/ft_array_resize.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_is/ft_isalnum.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_is/ft_isalpha.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_is/ft_isascii.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_is/ft_isdigit.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_is/ft_isprint.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_is/ft_isspace.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_lst/ft_clear_list.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_lst/ft_list_len.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_lst/ft_lstadd.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_lst/ft_lstdel.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_lst/ft_lstdelone.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_lst/ft_lstiter.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_lst/ft_lstmap.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_lst/ft_lstnew.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_lst/ft_lstpushback.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_mem/ft_bzero.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_mem/ft_memalloc.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_mem/ft_memccpy.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_mem/ft_memchr.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_mem/ft_memcmp.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_mem/ft_memcpy.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_mem/ft_memdel.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_mem/ft_memmove.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_mem/ft_memset.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_printf/display.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_printf/float.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_printf/float_and_decimal.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_printf/float_utility.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_printf/ft_printf.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_printf/get_numbers.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_printf/search_flags.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_printf/string_and_hexadecimal.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_printf/upper_type.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_printf/utility.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_put/ft_putchar.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_put/ft_putchar_fd.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_put/ft_putendl.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_put/ft_putendl_fd.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_put/ft_putnbr.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_put/ft_putnbr_fd.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_atoi.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_clear_table.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_itoa.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_putstr.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_putstr_fd.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strcat.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strchr.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strclr.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strcmp.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strcpy.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strdel.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strdup.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strequ.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_striter.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_striteri.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strjoin.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strlcat.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strlen.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strmap.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strmapi.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strncat.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strncmp.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strncpy.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strnequ.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strnew.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strnstr.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strrchr.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strsort.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strsplit.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strstr.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strsub.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_strtrim.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_tolower.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_toupper.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_wordcounter.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/get_next_line.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/main.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/parse.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/utilities_1.c">
+			<Option target="lemin_parse"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
