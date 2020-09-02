@@ -342,6 +342,9 @@
 		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/get_next_line.c">
 			<Option target="lemin_parse"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/links.c">
+			<Option target="lemin_parse"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/main.c">
 			<Option target="lemin_parse"/>
 		</Unit>

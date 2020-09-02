@@ -97,4 +97,4 @@ add_executable(lemin_parse
         libft/src/ft_str/get_next_line.c
         src/main.c
         src/parse.c
-        src/utilities_1.c)
+        src/utilities_1.c src/links.c)

@@ -34,33 +34,22 @@ int check_ants(t_lm_data *lem, char **map)
     return (0);
 }
 
-/*int check_rooms(t_lm_data *lem, char **map)
+int check_rooms(t_lm_data *lem, char **map)
 {
 	int i;
-	int count_room;
-	int i_in_str;
 
-	i = 1;
-	count_room = 0;
-	i_in_str = 0;
-	while(map != '\0')
+	i = 0;
+	if (lem->start == NULL || lem->end == NULL)
+		return (-1);
+	while(lem->rooms)
 	{
-		if (ft_strequ(map[i], "##start\n")) ////  \n не лишний?
-		{
-			while (map[++i][i_in_str] != ' ')
-				lem->start[i_in_str] = map[i][i_in_str];
-			lem->room = lem->start;
-		}
-		else if (ft_strequ(map[i], "##end\n"))  ////  \n не лишний?
-		{
-			lem->end = map[++i];
-			lem->rooms[count_room++] = map[i];
-		}
-		if (map[i][0] == '#' && map[i][1] != '#')
-			i++;
+		if (lem->rooms[i++][0] == 'L')
+			return (-1);
 	}
 	return (0);
-}*/int record_rooms(t_lm_data *lem, char **map)
+}
+
+ int record_rooms(t_lm_data *lem, char **map)
 {
 	int i;
 	int count_room;
@@ -96,9 +85,14 @@ int get_data(char **map, t_lm_data *lem)
 	i = 1;
 	if (check_ants(lem, map) == -1)
 		return (-1);
-	if (record_rooms(lem, map) == -1)
+	record_rooms(lem, map);
+	if (check_rooms(lem, map) == -1)
 		return (-1);
+	record_links(lem, map);
 
+	if (count_rows(map) != (lem->nb_rooms + lem->nb_links + lem->nb_comments + 3)) //// 3= ants + start + end
+		return (-1);
+	return (0);
 }
 
 int	parse(char **map, t_lm_data *lem)

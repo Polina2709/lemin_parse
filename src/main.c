@@ -18,12 +18,13 @@ int		init_struct(t_lm_data *lem, char **map)
 	if ((lem->nb_rooms = ft_count_rooms(map)) == -1)  //// почему то функцию count rooms подсвечивает красных, хотя она есть. Мб из--за того, что здесь статик, но я не уверена
 		return (-1);
 	lem->nb_links = ft_count_links(map); //// c count_links то же самое что и с count_rooms
+	lem->nb_comments = count_comments(lem, map);
 	lem->start = NULL;
 	lem->end = NULL;
 	if ((lem->rooms = (char **)malloc(sizeof(char *) * lem->nb_rooms + 1)) == NULL)
 		return (-1);
 	lem->rooms[lem->nb_rooms] = 0; //// чет не поняла))
-	if ((lem->links = (char **)malloc(sizeof(char *) * lem->nb_links +1)) == NULL)
+	if ((lem->links = (char **)malloc(sizeof(char *) * lem->nb_links + 1)) == NULL)
 	{
 		ft_clear_table(lem->rooms);
 		return (-1);

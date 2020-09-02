@@ -87,6 +87,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_toupper.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/libft/src/ft_str/ft_toupper.c.o"
   "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/ft_wordcounter.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/libft/src/ft_str/ft_wordcounter.c.o"
   "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/libft/src/ft_str/get_next_line.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/libft/src/ft_str/get_next_line.c.o"
+  "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/links.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/src/links.c.o"
   "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/main.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/src/main.c.o"
   "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/parse.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/src/parse.c.o"
   "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/utilities_1.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/src/utilities_1.c.o"

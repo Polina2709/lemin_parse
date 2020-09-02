@@ -2364,6 +2364,33 @@ libft/src/ft_str/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/lemin_parse.dir/build.make CMakeFiles/lemin_parse.dir/libft/src/ft_str/get_next_line.c.s
 .PHONY : libft/src/ft_str/get_next_line.c.s
 
+src/links.o: src/links.c.o
+
+.PHONY : src/links.o
+
+# target to build an object file
+src/links.c.o:
+	$(MAKE) -f CMakeFiles/lemin_parse.dir/build.make CMakeFiles/lemin_parse.dir/src/links.c.o
+.PHONY : src/links.c.o
+
+src/links.i: src/links.c.i
+
+.PHONY : src/links.i
+
+# target to preprocess a source file
+src/links.c.i:
+	$(MAKE) -f CMakeFiles/lemin_parse.dir/build.make CMakeFiles/lemin_parse.dir/src/links.c.i
+.PHONY : src/links.c.i
+
+src/links.s: src/links.c.s
+
+.PHONY : src/links.s
+
+# target to generate assembly for a file
+src/links.c.s:
+	$(MAKE) -f CMakeFiles/lemin_parse.dir/build.make CMakeFiles/lemin_parse.dir/src/links.c.s
+.PHONY : src/links.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -2703,6 +2730,9 @@ help:
 	@echo "... libft/src/ft_str/get_next_line.o"
 	@echo "... libft/src/ft_str/get_next_line.i"
 	@echo "... libft/src/ft_str/get_next_line.s"
+	@echo "... src/links.o"
+	@echo "... src/links.i"
+	@echo "... src/links.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

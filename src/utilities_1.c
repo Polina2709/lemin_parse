@@ -12,6 +12,30 @@
 
 #include "lem_in.h"
 
+int count_rows(char **map)
+{
+	int i;
+
+	i = 0;
+	while(map[i])
+		i++;
+	return (i);
+}
+
+int count_comments(t_lm_data *lem, char **map)
+{
+	int i;
+
+	i = 0;
+	while(map[i])
+	{
+		if (map[i][0] == '#' && map[i][1] != '#')
+			lem->nb_comments++;
+		i++;
+	}
+	return (0);
+}
+
 int	count_spaces(char *line)
 {
 	int i;
