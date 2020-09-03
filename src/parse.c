@@ -15,15 +15,19 @@
 
 int check_ants(t_lm_data *lem, char **map)
 {
-    while (map != '\n')
+    while (**map != '\n')
     {
-        if (!(map < '9' && map > '0'))
+        if (!(**map < '9' && **map > '0'))
         {
             ft_putstr_fd("ERROR\n", 2); // я бы предпочёл заморочиться ошибками по итогу, но если будет время и желание - изучи strerror и perror
             return (-1);
         }
         else
-            lem->nb_ants = lem->nb_ants * 10 + (int)map;
+        {
+            ft_printf("%d", (int)**map);
+            lem->nb_ants = lem->nb_ants * 10 + (int)(**map);
+        }
+
         map++;
     }
     if (!(lem->nb_ants > 0 && lem->nb_ants < 2147483648))

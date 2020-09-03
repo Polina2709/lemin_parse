@@ -89,7 +89,7 @@ int				main(int argc, char **argv)
 {
 	char		**map;
 	int			fd_map;
-	t_lm_data	*lem;
+	t_lm_data	lem;
 
 	if ((fd_map = open(argv[argc - 1], O_RDONLY)) == -1)
 	{
