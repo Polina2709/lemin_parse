@@ -33,7 +33,7 @@ int count_comments(t_lm_data *lem, char **map)
 			lem->nb_comments++;
 		i++;
 	}
-	return (0);
+	return (lem->nb_comments);
 }
 
 int	count_spaces(char *line)

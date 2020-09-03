@@ -18,6 +18,7 @@ int		init_struct(t_lm_data *lem, char **map)
 	if ((lem->nb_rooms = ft_count_rooms(map)) == -1)  //// почему то функцию count rooms подсвечивает красных, хотя она есть. Мб из--за того, что здесь статик, но я не уверена
 		return (-1);
 	lem->nb_links = ft_count_links(map); //// c count_links то же самое что и с count_rooms
+    lem->nb_comments = 0;
 	lem->nb_comments = count_comments(lem, map);
 	lem->start = NULL;
 	lem->end = NULL;
@@ -106,6 +107,11 @@ int				main(int argc, char **argv)
 		ft_clear_table(map);
 		return (-1);
 	}
-	parse(map, &lem);
+	if (parse(map, &lem) == -1)
+    {
+        ft_putstr_fd("ERROR\n", 2);
+        ft_clear_table(map);
+        return (-1);
+    }
 	return (0);
 }
