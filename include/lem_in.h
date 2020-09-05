@@ -94,4 +94,7 @@ int check_space_in_rooms(t_lm_data *lem);
 int record_links(t_lm_data *lem, char **map);
 
 
+void remove_coordinates(t_lm_data *lem);
+
+
 #endif
