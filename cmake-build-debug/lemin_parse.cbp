@@ -351,6 +351,9 @@
 		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/parse.c">
 			<Option target="lemin_parse"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/rooms.c">
+			<Option target="lemin_parse"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/utilities_1.c">
 			<Option target="lemin_parse"/>
 		</Unit>

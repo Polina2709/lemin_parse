@@ -2445,6 +2445,33 @@ src/parse.c.s:
 	$(MAKE) -f CMakeFiles/lemin_parse.dir/build.make CMakeFiles/lemin_parse.dir/src/parse.c.s
 .PHONY : src/parse.c.s
 
+src/rooms.o: src/rooms.c.o
+
+.PHONY : src/rooms.o
+
+# target to build an object file
+src/rooms.c.o:
+	$(MAKE) -f CMakeFiles/lemin_parse.dir/build.make CMakeFiles/lemin_parse.dir/src/rooms.c.o
+.PHONY : src/rooms.c.o
+
+src/rooms.i: src/rooms.c.i
+
+.PHONY : src/rooms.i
+
+# target to preprocess a source file
+src/rooms.c.i:
+	$(MAKE) -f CMakeFiles/lemin_parse.dir/build.make CMakeFiles/lemin_parse.dir/src/rooms.c.i
+.PHONY : src/rooms.c.i
+
+src/rooms.s: src/rooms.c.s
+
+.PHONY : src/rooms.s
+
+# target to generate assembly for a file
+src/rooms.c.s:
+	$(MAKE) -f CMakeFiles/lemin_parse.dir/build.make CMakeFiles/lemin_parse.dir/src/rooms.c.s
+.PHONY : src/rooms.c.s
+
 src/utilities_1.o: src/utilities_1.c.o
 
 .PHONY : src/utilities_1.o
@@ -2739,6 +2766,9 @@ help:
 	@echo "... src/parse.o"
 	@echo "... src/parse.i"
 	@echo "... src/parse.s"
+	@echo "... src/rooms.o"
+	@echo "... src/rooms.i"
+	@echo "... src/rooms.s"
 	@echo "... src/utilities_1.o"
 	@echo "... src/utilities_1.i"
 	@echo "... src/utilities_1.s"

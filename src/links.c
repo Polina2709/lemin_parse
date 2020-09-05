@@ -13,5 +13,9 @@ int record_links(t_lm_data *lem, char **map)
 		i++;
 	while (map[i])
 		lem->links[count_links++] = map[i++];
+	if (count_links != lem->nb_links) /// мб и лишнее, но пока вижу в этом логику
+		return (-1);
 	return (0);
 }
+
+

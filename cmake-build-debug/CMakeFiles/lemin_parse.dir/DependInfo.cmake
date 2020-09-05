@@ -90,6 +90,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/links.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/src/links.c.o"
   "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/main.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/src/main.c.o"
   "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/parse.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/src/parse.c.o"
+  "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/rooms.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/src/rooms.c.o"
   "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/src/utilities_1.c" "/cygdrive/c/Users/Polina/Desktop/21/lemin_parse/cmake-build-debug/CMakeFiles/lemin_parse.dir/src/utilities_1.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

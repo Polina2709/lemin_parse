@@ -30,13 +30,15 @@
 
 typedef struct	s_lm_data
 {
-	int nb_ants; //// мб тут лонг инт сделать (есть мысля, если что объясню ВК)
+	long int nb_ants; //// мб тут лонг инт сделать (есть мысля, если что объясню ВК)
 	int nb_rooms;
 	int nb_links;
 	int nb_comments;
 	char *start;
 	char *end;
 	char **rooms;
+	long int x;
+	long int y;
 	char **links;
 }				t_lm_data;
 
@@ -83,9 +85,11 @@ int count_comments(t_lm_data *lem, char **map);
 
 int	parse(char **map, t_lm_data *lem);
 int get_data(char **map, t_lm_data *lem);
-int record_rooms(t_lm_data *lem, char **map);
 int check_ants(t_lm_data *lem, char **map);
-int check_rooms(t_lm_data *lem, char **map);
+
+int record_rooms(t_lm_data *lem, char **map);
+int check_rooms(t_lm_data *lem);
+int check_space_in_rooms(t_lm_data *lem);
 
 int record_links(t_lm_data *lem, char **map);
 
