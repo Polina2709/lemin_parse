@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsort.c                                       :+:      :+:    :+:   */
+/*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 16:35:39 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/06 10:04:39 by jconcent         ###   ########.fr       */
+/*   Created: 2020/08/26 15:12:36 by jconcent          #+#    #+#             */
+/*   Updated: 2020/08/26 15:13:13 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_swap(char *a, char *b)
+int		ft_isnumber(char *str)
 {
-	char temp;
-
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-void	ft_strsort(char *str)
-{
-	size_t i;
-	size_t j;
+	int i;
+	int sign;
+	int digit;
 
 	i = 0;
-	while (i < ft_strlen(str))
+	sign = 0;
+	digit = 0;
+	while (str[i])
 	{
-		j = 0;
-		while (j < ft_strlen(str))
+		if (str[i] == '-' || str[i] == '+')
 		{
-			if (str[i] < str[j])
-				ft_swap(&str[i], &str[j]);
-			j++;
+			sign++;
+			if (sign > 1 || digit > 0)
+				return (0);
 		}
+		else if (ft_isdigit(str[i]))
+			digit++;
+		else
+			return (0);
 		i++;
 	}
+	if (digit > 0)
+		return (1);
+	return (0);
 }

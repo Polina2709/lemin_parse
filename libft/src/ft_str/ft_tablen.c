@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsort.c                                       :+:      :+:    :+:   */
+/*   ft_tablen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 16:35:39 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/06 10:04:39 by jconcent         ###   ########.fr       */
+/*   Created: 2020/08/26 15:04:43 by jconcent          #+#    #+#             */
+/*   Updated: 2020/08/26 15:05:27 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_swap(char *a, char *b)
+size_t ft_tablen(char **tab)
 {
-	char temp;
+	size_t len;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-void	ft_strsort(char *str)
-{
-	size_t i;
-	size_t j;
-
-	i = 0;
-	while (i < ft_strlen(str))
-	{
-		j = 0;
-		while (j < ft_strlen(str))
-		{
-			if (str[i] < str[j])
-				ft_swap(&str[i], &str[j]);
-			j++;
-		}
-		i++;
-	}
+	len = 0;
+	while (tab[len])
+		len++;
+	return (len);
 }

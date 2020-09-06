@@ -1,46 +1,106 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   coord.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/09/06 10:49:58 by jconcent          #+#    #+#             */
+/*   Updated: 2020/09/06 12:15:44 by jconcent         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
-int check_coordinates(t_lm_data *lem)  ////  не учитывает знак
+int		second_coordinates(char *room)
 {
 	int i;
-	int c_rooms;
+
+	i = first_coordinates(room);
+	while (room[i] != ' ')
+		i++;
+	return (i + 1);
+}
+
+int		first_coordinates(char *room)
+{
+	int i;
 
 	i = 0;
-	c_rooms = 0;
-	lem->x = 0;
-	lem->y = 0;
-	if (lem->rooms[c_rooms][i] != '+')
+	while (room[i] != ' ')
 		i++;
-	while (lem->rooms[c_rooms][++i] != ' ')
-	{
-		if ((lem->rooms[c_rooms][i] - '0' >= 0 && lem->rooms[c_rooms][i] - '0' <= 9) ||
-			((lem->rooms[c_rooms][i] == '-' || lem->rooms[c_rooms][i] == '+') && lem->rooms[c_rooms][i - 1] == ' '))
-			lem->x = lem->rooms[c_rooms][i] - '0';
-		else
-			return (-1);
-	}
-	while (lem->rooms[c_rooms][++i] != '\n')
-	{
-		if (lem->rooms[c_rooms][i] - '0' >= 0 && lem->rooms[c_rooms][i] - '0' <= 9)
-			lem->y = lem->rooms[c_rooms][i] - '0';
-		else
-			return (-1);
-	}
+	return (i + 1);
 }
+
+void	add_coordinates(char *room)
+{
+	int i;
+
+	i = 0;
+	while (room[i])
+		i++;
+	room[i] = ' ';
+}
+
+/*
+**	Line with room can have only three strings - name of rooms, first coord and second coord.
+**	If coord is not number - is not valid.
+*/
+
+int check_coordinates(t_lm_data *lem)
+{
+	int i;
+	int j;
+	int rt;
+	char **split;
+
+	i = 0;
+	rt = 0;
+	while (lem->rooms[i])
+	{
+		j = 1;
+		split = ft_strsplit(lem->rooms[i], ' ');
+		if (ft_tablen(split) != 3)
+			rt = -1;
+		while (split[j])
+		{
+			if (!ft_isnumber(split[j]))
+				rt = -1;
+			j++;
+		}
+		ft_clear_table(split);
+		i++;
+		if (rt == -1)
+			break ;
+	}
+	return (rt);
+}
+
+/*
+**	When we check coordinates we no longer need them.
+**	We add '\0' after name of room.
+*/
 
 void remove_coordinates(t_lm_data *lem)
 {
 	int i;
-	int count_rooms;
+	int j;
 
 	i = 0;
-	count_rooms = 0;
-	while (lem->rooms[count_rooms])
+	while (lem->rooms[i])
 	{
-		while (lem->rooms[count_rooms][i] != ' ')
-			i++;
-		lem->rooms[count_rooms][i] = '\0';
-		count_rooms++;
-		i = 0;
+		j = 0;
+		while (lem->rooms[i][j] != ' ')
+			j++;
+		lem->rooms[i][j] = '\0';
+		i++;
 	}
+	i = 0;
+	while (lem->start[i] != ' ')
+		i++;
+	lem->start[i] = '\0';
+	i = 0;
+	while (lem->end[i] != ' ')
+		i++;
+	lem->end[i] = '\0';
 }

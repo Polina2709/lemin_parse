@@ -6,34 +6,59 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 12:56:05 by jconcent          #+#    #+#             */
-/*   Updated: 2020/08/31 12:56:40 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/09/06 11:40:05 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-int count_rows(char **map)
-{
-	int i;
+/*
+**	If if positive and it number - we got it.
+*/
 
-	i = 0;
-	while(map[i])
-		i++;
-	return (i);
+static int check_valid_ants(char *line)
+{
+	if (line[0] == '-')
+		return (0);
+	else if (!ft_isint(line))
+		return (0);
+	else
+		return (ft_atoi(line));
 }
 
-int count_comments(t_lm_data *lem, char **map)
+/*
+**	Number of ants - is first line in the whole map.
+**	It's only number without '#' and other char.
+*/
+
+int get_ant_nb(char **map, t_lm_data *lem)
 {
 	int i;
+	int nb_ants;
 
 	i = 0;
-	while(map[i])
+	while (map[i])
 	{
-		if (map[i][0] == '#' && map[i][1] != '#')
-			lem->nb_comments++;
+		if (ft_strequ(map[i], "##start") || ft_strequ(map[i], "##end"))
+			return (-1);
+		else if (map[i][0] == '#')
+			;
+		else
+		{
+			if (!(nb_ants = check_valid_ants(map[i])))
+				return (-1);
+			break ;
+		}
 		i++;
 	}
-	return (lem->nb_comments);
+	if (map[i])
+	{
+		lem->i = i + 1;
+		return (nb_ants);
+	}
+	else
+		return (-1);
+	
 }
 
 int	count_spaces(char *line)
@@ -52,6 +77,11 @@ int	count_spaces(char *line)
 	return (spaces);
 }
 
+/*
+**	Links - is a line without spaces, not starting with '#' and have one '-'.
+**	Other check will follow
+*/
+
 int	ft_count_links(char **map)
 {
 	int i;
@@ -61,12 +91,17 @@ int	ft_count_links(char **map)
 	links = 0;
 	while (map[i])
 	{
-		if (map[i][0] != '#' && (count_spaces(map[i]) == 0) && ft_strchr(map[i], '-'))  /// может ли комната быть связана сама с собой
+		if (map[i][0] != '#' && (count_spaces(map[i]) == 0) && ft_strchr(map[i], '-'))
 			links++;
 		i++;
 	}
 	return (links);
 }
+
+/*
+**	Rooms - is a line with only two spaces and not starting with '#'.
+**	Other checks will follow
+*/
 
 int	ft_count_rooms(char **map)
 {
@@ -77,11 +112,9 @@ int	ft_count_rooms(char **map)
 	rooms = 0;
 	while (map[i])
 	{
-		if (map[i][0] != '#' && count_spaces(map[i]) == 2)  /// тогда будем считать, что комната "Big room" невалидна?
-			////  а если тут будут коряво указаны линки с пробелами, по типу "А - В". тоже не с #, но при этом 2 пробела, тогда комнат больше покажет. (мб это потом проверяется, просто пишу сразу  мысли)
+		if (map[i][0] != '#' && count_spaces(map[i]) == 2)
 			rooms++;
-		else if (map[i][0] != '#' && (count_spaces(map[i]) == 1 || count_spaces(map[i]) > 2)) //// если 0 пробелов это чтобы пропустило с количеством муравьев, я так понимаю,  а если будет просто название комнаты без координат, то тогда он не вылетит.
-		/// также вопрос. Комнаты с одинаковыми названиями это норм?
+		else if (map[i][0] != '#' && (count_spaces(map[i]) == 1 || count_spaces(map[i]) > 2))
 			return (-1);
 		i++;
 	}
