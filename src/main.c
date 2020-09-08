@@ -130,7 +130,6 @@ int				main(int argc, char **argv)
         ft_putstr_fd("ERROR\n", 2);
         return (-1);
     }
-
 	ft_printf("Выведем для начала карту: \nНАЧАЛО КАРТЫ\n");
 	for (size_t i = 0; i < ft_tablen(map); i++)
 		ft_printf("%s\n", map[i]);

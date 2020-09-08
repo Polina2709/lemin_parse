@@ -121,7 +121,7 @@ int				path_finding(char **map, t_lm_data *lem)
 	t_node	*rooms;
 	int		**route;
 
-	(void)map;
+	(void)map; //// что ты тут сделал и зачем?
 	if (!(rooms = init_nodes(lem)))
 		return (-1);
 	if (!(route = init_route(lem)))

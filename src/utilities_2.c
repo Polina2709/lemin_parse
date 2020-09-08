@@ -52,7 +52,7 @@ int	get_start_get_end(char **map, t_lm_data *lem, int s_e)
 	{
 		while (map[lem->i][0] == '#' && map[lem->i + 1])
 			lem->i++;
-		if (lem->start)
+		if (lem->start)		//// а зачем это?
 			return (-1);
 		if (isroom(map[lem->i]))
 			lem->start = ft_strdup(map[lem->i]);

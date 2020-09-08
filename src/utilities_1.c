@@ -37,6 +37,7 @@ int get_ant_nb(char **map, t_lm_data *lem)
 	int nb_ants;
 
 	i = 0;
+	nb_ants = 0;
 	while (map[i])
 	{
 		if (ft_strequ(map[i], "##start") || ft_strequ(map[i], "##end"))
@@ -58,7 +59,6 @@ int get_ant_nb(char **map, t_lm_data *lem)
 	}
 	else
 		return (-1);
-	
 }
 
 int	count_spaces(char *line)
