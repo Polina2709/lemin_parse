@@ -6,7 +6,7 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 11:55:50 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/06 12:19:49 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/09/19 09:50:45 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static void		distance(int **route, int size)
 			{
 				if (route[j][col] + route[i][j] < route[i][col])
 				{
+					ft_printf("%d %d %d \n", i, j, col);
 					route[i][col] = route[j][col] + route[i][j];
 					update = 1;
 				}
@@ -80,17 +81,6 @@ static int		**init_route(t_lm_data *lem)
 				connections[i][j] = get_connections(i, j, lem);
 		}
 	}
-	ft_printf("**********\n");
-	ft_printf("ЗДЕСЬ ПРЕДСТАВЛЕНА МАТРИЦА СОЕДИНЕНИЙ! 1 - наличие соединения, а 9 - отсутствие\n");
-	for (int i = 0; i < lem->nb_rooms; i++)
-	{	
-		ft_printf("%d: ", i);
-		for (int j = 0; j < lem->nb_rooms; j++)
-			ft_printf("%3d", connections[i][j]);
-		ft_printf("\n");
-	}
-	ft_printf("**********\n");
-	ft_printf("\n\n");
 	distance(connections, lem->nb_rooms);
 	return (connections);
 }
@@ -120,21 +110,18 @@ int				path_finding(char **map, t_lm_data *lem)
 {
 	t_node	*rooms;
 	int		**route;
+	int		nb_solutions;
+	t_array	**solutions;
 
-	(void)map; //// что ты тут сделал и зачем?
+	(void)map;
 	if (!(rooms = init_nodes(lem)))
 		return (-1);
 	if (!(route = init_route(lem)))
 		return (-1);
-	ft_printf("**********\n");
-	ft_printf("ЗДЕСЬ ПРЕДСТАВЛЕНА МАТРИЦА СОЕДИНЕНИЙ С ВЫЧЕСЛЕНЫМИ РАССТОЯНИМИ. 1 - прямое соединение, иная цифра - количество переходов\n");
-	for (int i = 0; i < lem->nb_rooms; i++)
-	{	
-		ft_printf("%d: ", i);
-		for (int j = 0; j < lem->nb_rooms; j++)
-			ft_printf("%3d", route[i][j]);
-		ft_printf("\n");
+	if ((nb_solutions = run_puthfinder(route, &solutions, rooms, lem)) == 0)
+	{
+		free_nodes(rooms, lem->nb_rooms, -1); // эта функция будет в файле free
+		return (free_int_tab(route, lem->nb_rooms, -1)); // эта тоже
 	}
-	ft_printf("**********\n");
 	return (0);
 }

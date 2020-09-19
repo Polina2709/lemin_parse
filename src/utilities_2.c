@@ -6,7 +6,7 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 10:32:13 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/06 11:42:11 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/09/10 09:49:07 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	get_start_get_end(char **map, t_lm_data *lem, int s_e)
 	{
 		while (map[lem->i][0] == '#' && map[lem->i + 1])
 			lem->i++;
-		if (lem->start)		//// а зачем это?
+		if (lem->start)
 			return (-1);
 		if (isroom(map[lem->i]))
 			lem->start = ft_strdup(map[lem->i]);

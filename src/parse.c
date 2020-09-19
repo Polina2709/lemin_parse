@@ -6,7 +6,7 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 13:04:44 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/06 11:37:30 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/09/10 09:49:11 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int get_data(char **map, t_lm_data *lem)
 			if (get_start_get_end(map, lem, 1) == -1)
 				rt = -1;
 		if (ft_strequ(map[lem->i], "##end"))
-			if (get_start_get_end(map, lem, 2) == 1)  //// а здесь не -1?
+			if (get_start_get_end(map, lem, 2) == -1)
 				rt = -1;
 		if (map[lem->i][0] != '#' && count_spaces(map[lem->i]) == 2)
 			if (get_room_get_link(map[lem->i], lem, 1) == -1)

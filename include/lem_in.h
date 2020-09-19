@@ -6,7 +6,7 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 12:38:31 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/06 12:15:25 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/09/10 14:23:32 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,7 @@ void			add_coordinates(char *room);
 int				first_coordinates(char *room);
 int				second_coordinates(char *room);
 int				path_finding(char **map, t_lm_data *lem);
+int				free_int_tab(int **tab, int size, int status);
+int				free_nodes(t_node *rooms, int size, int status);
 
 #endif
