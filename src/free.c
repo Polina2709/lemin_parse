@@ -14,10 +14,29 @@
 
 int		free_int_tab(int **tab, int size, int status)
 {
-
+	int i;
+	i = 0;
+	while (i < size)
+	{
+		j = 0;
+		while (j < size)
+		{
+			free(tab[i][j]);
+			j++;
+		}
+		i++;
+	}
+	free(tab);
 }
 
 int	free_nodes(t_node *rooms, int size, int status)
 {
-
+	int i;
+	i = 0;
+	while (i < size)
+	{
+		free(rooms[i].name);
+		i++;
+	}
+	free(rooms);
 }
