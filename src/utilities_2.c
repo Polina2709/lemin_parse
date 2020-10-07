@@ -6,7 +6,7 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 10:32:13 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/10 09:49:07 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/10/07 10:04:08 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **	1 - is rooms and 2 - is links.
 */
 
-int get_room_get_link(char *line, t_lm_data *lem, int r_l)
+int			get_room_get_link(char *line, t_lm_data *lem, int r_l)
 {
 	if (r_l == 1)
 	{
@@ -34,7 +34,7 @@ int get_room_get_link(char *line, t_lm_data *lem, int r_l)
 	return (0);
 }
 
-static int isroom(char *line)
+static int	isroom(char *line)
 {
 	if (line[0] != '#' && count_spaces(line) == 2)
 		return (1);
@@ -46,7 +46,7 @@ static int isroom(char *line)
 **	1 - is start and 2 - is end.
 */
 
-int	get_start_get_end(char **map, t_lm_data *lem, int s_e)
+int			get_start_get_end(char **map, t_lm_data *lem, int s_e)
 {
 	if (s_e == 1)
 	{
@@ -67,4 +67,22 @@ int	get_start_get_end(char **map, t_lm_data *lem, int s_e)
 			lem->end = ft_strdup(map[lem->i]);
 	}
 	return (0);
+}
+
+void		ft_array_add_space(t_array *self, char *data)
+{
+	ft_array_add(self, data, ft_strlen(data));
+	ft_array_add(self, " ", 1);
+}
+
+void		ft_print_tab(char **tab)
+{
+	int i;
+
+	i = 0;
+	while (tab[i])
+	{
+		ft_printf("%s\n", tab[i]);
+		i++;
+	}
 }

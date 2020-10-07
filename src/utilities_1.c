@@ -6,7 +6,7 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 12:56:05 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/06 11:40:05 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/10/07 10:13:44 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 **	If if positive and it number - we got it.
 */
 
-static int check_valid_ants(char *line)
+static int	check_valid_ants(char *line)
 {
 	if (line[0] == '-')
 		return (0);
@@ -31,14 +31,14 @@ static int check_valid_ants(char *line)
 **	It's only number without '#' and other char.
 */
 
-int get_ant_nb(char **map, t_lm_data *lem)
+int			get_ant_nb(char **map, t_lm_data *lem)
 {
 	int i;
 	int nb_ants;
 
-	i = 0;
+	i = -1;
 	nb_ants = 0;
-	while (map[i])
+	while (map[i++])
 	{
 		if (ft_strequ(map[i], "##start") || ft_strequ(map[i], "##end"))
 			return (-1);
@@ -50,7 +50,6 @@ int get_ant_nb(char **map, t_lm_data *lem)
 				return (-1);
 			break ;
 		}
-		i++;
 	}
 	if (map[i])
 	{
@@ -61,7 +60,7 @@ int get_ant_nb(char **map, t_lm_data *lem)
 		return (-1);
 }
 
-int	count_spaces(char *line)
+int			count_spaces(char *line)
 {
 	int i;
 	int spaces;
@@ -82,7 +81,7 @@ int	count_spaces(char *line)
 **	Other check will follow
 */
 
-int	ft_count_links(char **map)
+int			ft_count_links(char **map)
 {
 	int i;
 	int links;
@@ -91,7 +90,8 @@ int	ft_count_links(char **map)
 	links = 0;
 	while (map[i])
 	{
-		if (map[i][0] != '#' && (count_spaces(map[i]) == 0) && ft_strchr(map[i], '-'))
+		if (map[i][0] != '#' && (count_spaces(map[i]) == 0)
+									&& ft_strchr(map[i], '-'))
 			links++;
 		i++;
 	}
@@ -103,7 +103,7 @@ int	ft_count_links(char **map)
 **	Other checks will follow
 */
 
-int	ft_count_rooms(char **map)
+int			ft_count_rooms(char **map)
 {
 	int i;
 	int rooms;
@@ -114,7 +114,8 @@ int	ft_count_rooms(char **map)
 	{
 		if (map[i][0] != '#' && count_spaces(map[i]) == 2)
 			rooms++;
-		else if (map[i][0] != '#' && (count_spaces(map[i]) == 1 || count_spaces(map[i]) > 2))
+		else if (map[i][0] != '#' && (count_spaces(map[i]) == 1 ||
+											count_spaces(map[i]) > 2))
 			return (-1);
 		i++;
 	}

@@ -6,23 +6,23 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 10:49:58 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/06 12:15:44 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/10/07 10:17:57 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-int		second_coordinates(char *room)
+int		second_coord(char *room)
 {
 	int i;
 
-	i = first_coordinates(room);
+	i = first_coord(room);
 	while (room[i] != ' ')
 		i++;
 	return (i + 1);
 }
 
-int		first_coordinates(char *room)
+int		first_coord(char *room)
 {
 	int i;
 
@@ -43,16 +43,17 @@ void	add_coordinates(char *room)
 }
 
 /*
-**	Line with room can have only three strings - name of rooms, first coord and second coord.
+**	Line with room can have only three strings - name of rooms,
+**	first coord and second coord.
 **	If coord is not number - is not valid.
 */
 
-int check_coordinates(t_lm_data *lem)
+int		check_coordinates(t_lm_data *lem)
 {
-	int i;
-	int j;
-	int rt;
-	char **split;
+	int		i;
+	int		j;
+	int		rt;
+	char	**split;
 
 	i = 0;
 	rt = 0;
@@ -81,7 +82,7 @@ int check_coordinates(t_lm_data *lem)
 **	We add '\0' after name of room.
 */
 
-void remove_coordinates(t_lm_data *lem)
+void	remove_coordinates(t_lm_data *lem)
 {
 	int i;
 	int j;

@@ -6,13 +6,13 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 10:56:54 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/06 11:53:13 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/10/06 17:11:01 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-static int check_second_link_c(char *second_link, t_lm_data *lem)
+static int	check_sl(char *second_link, t_lm_data *lem)
 {
 	int i;
 	int stop;
@@ -34,7 +34,7 @@ static int check_second_link_c(char *second_link, t_lm_data *lem)
 **	Check that links have '-' between rooms and check second links to valid.
 */
 
-int check_second_link(t_lm_data *lem)
+int			check_second_link(t_lm_data *lem)
 {
 	int i;
 	int j;
@@ -45,8 +45,11 @@ int check_second_link(t_lm_data *lem)
 		j = 0;
 		while (lem->rooms[j])
 		{
-			if (ft_strnequ(lem->rooms[j], lem->links[i], ft_strlen(lem->rooms[j])) && lem->links[i][ft_strlen(lem->rooms[j])] == '-')
-				if (check_second_link_c(&lem->links[i][ft_strlen(lem->rooms[j]) + 1], lem) == -1)
+			if (ft_strnequ(lem->rooms[j], lem->links[i],
+				ft_strlen(lem->rooms[j])) &&
+				lem->links[i][ft_strlen(lem->rooms[j])] == '-')
+				if (check_sl(&lem->links[i][ft_strlen(lem->rooms[j]) + 1],
+																	lem) == -1)
 					return (-1);
 			j++;
 		}
@@ -59,7 +62,7 @@ int check_second_link(t_lm_data *lem)
 **	We check that the link points to an existing room
 */
 
-int check_first_link(t_lm_data *lem)
+int			check_first_link(t_lm_data *lem)
 {
 	int i;
 	int j;
@@ -72,7 +75,8 @@ int check_first_link(t_lm_data *lem)
 		stop = 0;
 		while (lem->rooms[j])
 		{
-			if (ft_strnequ(lem->rooms[j], lem->links[i], ft_strlen(lem->rooms[j])))
+			if (ft_strnequ(lem->rooms[j], lem->links[i],
+				ft_strlen(lem->rooms[j])))
 				stop++;
 			j++;
 		}
@@ -87,7 +91,7 @@ int check_first_link(t_lm_data *lem)
 **	We are looking for rooms with the same name
 */
 
-int		check_identical_rooms(t_lm_data *lem)
+int			check_identical_rooms(t_lm_data *lem)
 {
 	int i;
 	int j;

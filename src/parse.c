@@ -6,10 +6,9 @@
 /*   By: jconcent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/31 13:04:44 by jconcent          #+#    #+#             */
-/*   Updated: 2020/09/10 09:49:11 by jconcent         ###   ########.fr       */
+/*   Updated: 2020/10/07 10:03:31 by jconcent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "lem_in.h"
 
@@ -19,7 +18,7 @@
 **	3. Getting all rooms and all links
 */
 
-static int get_data(char **map, t_lm_data *lem)
+static int	get_data(char **map, t_lm_data *lem)
 {
 	int rt;
 
@@ -37,9 +36,11 @@ static int get_data(char **map, t_lm_data *lem)
 		if (map[lem->i][0] != '#' && count_spaces(map[lem->i]) == 2)
 			if (get_room_get_link(map[lem->i], lem, 1) == -1)
 				rt = -1;
-		if (map[lem->i][0] != '#' && count_spaces(map[lem->i]) != 2 && ft_strchr(map[lem->i], '-'))
+		if (map[lem->i][0] != '#' && count_spaces(map[lem->i]) != 2
+			&& ft_strchr(map[lem->i], '-'))
 			get_room_get_link(map[lem->i], lem, 2);
-		if ((map[lem->i][0] != '#' && count_spaces(map[lem->i]) != 2 && !ft_strchr(map[lem->i], '-')) || map[lem->i][0] == 'L')
+		if ((map[lem->i][0] != '#' && count_spaces(map[lem->i]) != 2
+			&& !ft_strchr(map[lem->i], '-')) || map[lem->i][0] == 'L')
 			rt = -1;
 		lem->i++;
 	}
@@ -50,13 +51,14 @@ static int get_data(char **map, t_lm_data *lem)
 **	Filling the structure with data and checking it for validity
 */
 
-int	parse(char **map, t_lm_data *lem)
+int			parse(char **map, t_lm_data *lem)
 {
 	if (get_data(map, lem) == -1)
 		return (-1);
 	if (check_coordinates(lem) == -1)
 		return (-1);
-	if (!lem->start || !lem->end || !ft_tablen(lem->rooms) || !ft_tablen(lem->links))
+	if (!lem->start || !lem->end || !ft_tablen(lem->rooms) ||
+		!ft_tablen(lem->links))
 		return (-1);
 	remove_coordinates(lem);
 	if (check_identical_rooms(lem) == -1)
